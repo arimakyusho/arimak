@@ -1195,6 +1195,11 @@ def main():
         st.markdown('</div>', unsafe_allow_html=True)
         st.markdown("---")
         
+        # Mobile toggle switch (new code)
+        st.session_state.mobile = st.checkbox("📱 Mobile View", 
+                                            value=st.session_state.get('mobile', False),
+                                            help="Optimize layout for phones")
+        
         # Define navigation items
         nav_items = [
             {"label": "🏠 Home", "page": "Home"},
